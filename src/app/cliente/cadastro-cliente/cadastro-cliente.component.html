@@ -1,0 +1,61 @@
+<div class="form-group" [formGroup]="meuForm">
+
+
+
+  <div>{{title}}</div>
+
+
+  <div class="row">
+    <div class="col-md-3"> <label>Nome:</label>
+
+      <input name="text" [(ngModel)]="cliente.nome" class="form-control" formControlName="NAME" name="NAME"
+        autocomplete="off"></div>
+
+  <div>{{cliente.nome}} </div>
+    <div class="col-md-3"> <label>Cpf:</label>
+      <input name="text" [(ngModel)]="cliente.cpf" class="form-control" formControlName="CPF" name="CPF"
+        autocomplete="off"></div>
+
+    <div class="col-md-3"> <label>DataNascimento:</label>
+      <input name="text" [(ngModel)]="cliente.dataNascimento" class="form-control" formControlName="DATANASCIMENTO"
+        name="DATANASCIMENTO" autocomplete="off"></div>
+  </div>
+
+  <div class="row"> 
+
+    <div class="col-md-3"><label>Email</label>
+      <input name="text" [(ngModel)]="cliente.email" formControlName="EMAIL" name="EMAIL" class="form-control"
+        autocomplete="off"></div>
+  </div>
+
+  <div class="row">
+
+    <div class="col-md-3"><label>Logradouro</label>
+      <input name="text" [(ngModel)]="cliente.logradouro" formControlName="LOGRADOURO" name="LOGRADOURO"
+        class="form-control" autocomplete="off"></div>
+  </div>
+
+  <div class="row">
+
+    <div class="col-md-3"><label>Cep</label>
+      <input name="text" [(ngModel)]="cliente.cep" formControlName="CEP" name="CEP" class="form-control"
+        autocomplete="off"></div>
+  </div>
+
+  <div class="row">
+
+    <div class="col-md-3"><label>Cidade</label>
+      <input name="text" [(ngModel)]="cliente.cidade" formControlName="CIDADE" name="CIDADE" class="form-control"
+        autocomplete="off"></div>
+  </div>
+
+  <div class="row">
+
+    <div class="col-md-3"><label>Numero</label>
+      <input name="text" [(ngModel)]="cliente.numero" formControlName="NUMERO" name="NUMERO" class="form-control"
+        autocomplete="off"></div>
+  </div>
+
+  <button name="Cadastrar" value="Indicacao" class="btn btn-primary" type="submit" (click)="Salvar($event)">
+    Cadastrar</button>
+</div>

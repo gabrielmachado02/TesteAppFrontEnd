@@ -1,0 +1,83 @@
+    <p-dataTable [value]="rowData"  [rows]="10" [paginator]="true" 
+
+             [pageLinks]="3" [rowsPerPageOptions]="[5,10,20]">
+         
+             <p-column field="nome" [style]="{'width':'50px'}" 
+
+             header="Nome" [sortable]="true"></p-column>
+
+             <p-column field="cpf" [style]="{'width':'50px'}" 
+
+             header="Cpf" [sortable]="true"></p-column>
+
+             
+             <p-column field="dataNascimento" [style]="{'width':'50px'}" 
+
+             header="DataNascimento" [sortable]="true"></p-column>
+
+             <p-column field="email" [style]="{'width':'50px'}" 
+
+             header="Email" [sortable]="true"></p-column>
+
+             <p-column field="logradouro" [style]="{'width':'50px'}" 
+
+             header="Logradouro" [sortable]="true"></p-column>
+
+             <p-column field="Cep" [style]="{'width':'50px'}" 
+
+             header="Cep" [sortable]="true"></p-column>
+
+             <p-column field="cidade" [style]="{'width':'50px'}" 
+
+             header="Cidade" [sortable]="true"></p-column>
+
+             <p-column field="numero" [style]="{'width':'50px'}" 
+
+             header="Numero" [sortable]="true"></p-column>
+
+             <p-column header="Delete">
+                <ng-template let-col let-cliente="rowData" 
+
+                pTemplate type="body">
+                    <button type="button" pButton icon="fa-close" 
+
+                     (click)="showDialogToDelete(cliente)" 
+
+                     label="Delete"></button>
+
+                     <button type="button" 
+
+                     (click)="Edit(cliente)"
+
+                     label="Delete"></button>
+
+
+                </ng-template>
+            </p-column>
+            <footer><div class="ui-helper-clearfix" 
+
+            style="width:100%"></div></footer>
+
+    </p-dataTable>
+
+
+    <p-dialog header="Confirm Deletion" [(visible)]="displayDeleteDialog" 
+
+    modal="modal" showEffect="fade">
+<p>
+Are you sure to delete the following contact?
+</p>
+<p>
+<strong>{{ fullname }}</strong><br />
+</p>
+<footer>
+<div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix">
+<button type="button" pButton icon="fa-close" 
+
+    (click)="okDelete(false)" label="No"></button>
+<button type="button" pButton icon="fa-check" 
+
+    (click)="okDelete(true)" label="Yes"></button>
+</div>
+</footer>
+</p-dialog>
