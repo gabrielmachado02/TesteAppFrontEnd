@@ -39,13 +39,14 @@
                 <ng-template let-col let-cliente="rowData" 
 
                 pTemplate type="body">
-                    <button type="button" pButton icon="fa-close" 
-
+                    <button type="button" value="Excluir"
+                      
                      (click)="showDialogToDelete(cliente)" 
 
                      label="Delete"></button>
 
                      <button type="button" 
+                     pButton  class="pi pi-times"   
 
                      (click)="Edit(cliente)"
 
@@ -65,14 +66,14 @@
 
     modal="modal" showEffect="fade">
 <p>
-Are you sure to delete the following contact?
+Deseja deletar Cliente?
 </p>
 <p>
 <strong>{{ fullname }}</strong><br />
 </p>
 <footer>
 <div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix">
-<button type="button" pButton icon="fa-close" 
+<button type="button" pButton  value="Excluir"
 
     (click)="okDelete(false)" label="No"></button>
 <button type="button" pButton icon="fa-check" 

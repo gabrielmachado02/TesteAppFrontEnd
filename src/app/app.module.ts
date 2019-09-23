@@ -11,7 +11,7 @@ import { CadastroClienteComponent } from './cliente/cadastro-cliente/cadastro-cl
 import { ReactiveFormsModule } from '@angular/forms';
 import { ListaClienteComponent } from './cliente/lista-cliente/lista-cliente.component';
 import { InputTextModule, ButtonModule, DialogModule } from 'primeng/primeng';
-
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 
 const APP_ROUTES: Routes = [
@@ -20,19 +20,21 @@ const APP_ROUTES: Routes = [
 
 ];
 
-
 @NgModule({
   declarations: [
     AppComponent,  
-
-    CadastroClienteComponent,
+        CadastroClienteComponent,
         ListaClienteComponent
   ],
   imports: [
+    
     ReactiveFormsModule,
     BrowserModule,
+    AngularFontAwesomeModule,
     DialogModule,
-    
+    BrowserModule,
+  
+InputTextModule,
     FormsModule,
     BrowserAnimationsModule, 
     DataTableModule,
@@ -41,6 +43,7 @@ const APP_ROUTES: Routes = [
   
     routing,
   ],
+
   providers: [],
   bootstrap: [AppComponent]
 })
